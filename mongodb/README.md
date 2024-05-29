@@ -1,7 +1,7 @@
 
 # Mongodb
 
-# Movimiento previos
+## Movimiento previos
 Primero que nada, instalamos la imagen de mongo y la corremos.
 
 Cuando ya tenemos mongo corriendo en el puerto deseado podemos empezar a pasarle los archivos de interés (en este caso hay uno único en la carpeta `resources`).
@@ -12,7 +12,7 @@ una vez que tenemos el archivo en el contenedor, importamos el csv a la base de 
 
 `mongoimport --db music --collection albums --type csv --file /home/albumlist.csv --headerline`
 
-# Comprobar que funciona
+## Comprobar que funciona
 
 Usaremos mongo shell para enviar las consultas de los ejercicios b,c y d al puerto correspondiente para ver el funcionamiento correcto.
 

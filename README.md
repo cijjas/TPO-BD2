@@ -1,11 +1,23 @@
 # TPO-BD2
 
-El trabajo consiste en tres partes que demuestran el correcto uso de algunas bases de datos. Entre ellas se incluyen:
-1. Mongodb
+Este trabajo práctico obligatorio (TPO) para la materia Bases de Datos II en ITBA consiste en tres partes, cada una demostrando el uso correcto de diferentes bases de datos. Las bases de datos incluidas en este proyecto son:
+
+1. MongoDB
 2. Neo4j
 3. Redis
 
-Cada base de datos tiene su carpeta apartada (`./mongodb, ./neo4j, ./redis`) donde se podrá encontrar un README.md único dentro de ellas que mostrará la forma de ejecución.
+Cada base de datos tiene su propia carpeta (`./mongodb`, `./neo4j`, `./redis`) donde se puede encontrar un README.md específico que describe cómo ejecutar los ejemplos correspondientes.
 
-Para Mongodb y Redis hay ejecutables en el formato `.sh` que permiten ver el correcto funcionamiento.
-Para Neo4j como se utiliza una sandbox particular, se puede leer el `./neo4j/README.md` correspondiente a la carpeta.
+### Estructura del Proyecto
+
+|**Carpeta**|**Descripción**|**Ejecución**|
+|---|---|---|
+|`./mongodb`|Implementación de consultas y manipulaciones en una base de datos MongoDB.|Dentro de esta carpeta, se encuentran scripts ejecutables en formato `.sh` que permiten ver el correcto funcionamiento de las operaciones realizadas.|
+|`./neo4j`|Uso de una sandbox particular de Neo4j para realizar consultas sobre una base de datos de grafos.|Consultar el `README.md` dentro de la carpeta `./neo4j` para obtener instrucciones sobre cómo utilizar la sandbox y ejecutar las consultas requeridas.|
+|`./redis`|Realización de operaciones geo-referenciadas utilizando Redis.|Dentro de esta carpeta, se encuentran scripts ejecutables en formato `.sh` que permiten ver el correcto funcionamiento de las operaciones realizadas.|
+
+### Referencias
+
+- [Documentación de MongoDB](https://docs.mongodb.com/)
+- [Documentación de Neo4j](https://neo4j.com/docs/)
+- [Documentación de Redis](https://redis.io/docs/latest/develop/data-types/geospatial/)

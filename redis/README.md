@@ -2,7 +2,7 @@
 
 Para poder correr los comandos, se necesita tener el contenedor de redis corriendo.
 
->[!Guía rápida de docker redis]
+>[!Note]
 > Obtener imagen: `docker pull redis`
 > Correr en el puerto 6379: `docker run --name Myredis -p 6379:6379 -d redis`
 > - esto es importante porque si se cambia de puerto hay que alterar los scripts de python
@@ -33,6 +33,6 @@ El comando `GEOADD` trabaja sobre la estructura de datos `Sorted Set`, donde las
 > 
 > This format allows for bounding box and radius querying by checking the 1+8 areas needed to cover the whole shape and discarding elements outside it. The areas are checked by calculating the range of the box covered, removing enough bits from the less significant part of the sorted set score, and computing the score range to query in the sorted set for each area.
 > 
-> - Documentación de GEOADD
+> - [Documentación de GEOADD](https://redis.io/docs/latest/commands/geoadd/)
 
 

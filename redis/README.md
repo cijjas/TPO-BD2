@@ -26,6 +26,7 @@ Finalmente podes proceder a la ejecució de las consultas y tareas.
 | --------- | ---------------------- |
 | a         | `python3 import_data.py` |
 | b, c, d   | `python3 query_data.py`  |
+
 Finalmente para responder la pregunta **e: ¿Sobre qué estructura de Redis trabaja el GeoADD?**:
 
 El comando `GEOADD` trabaja sobre la estructura de datos `Sorted Set`, donde las coordenadas son almacenadas como elementos del set con la puntuación correspondiente a las coordenadas geohash.

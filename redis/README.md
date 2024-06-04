@@ -4,6 +4,7 @@ Para poder correr los comandos, se necesita tener el contenedor de redis corrien
 
 >[!Note]
 > Obtener imagen: `docker pull redis`
+>
 > Correr en el puerto 6379: `docker run --name Myredis -p 6379:6379 -d redis`
 > - esto es importante porque si se cambia de puerto hay que alterar los scripts de python
 > 

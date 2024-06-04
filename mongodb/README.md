@@ -1,28 +1,77 @@
 
-# Mongodb
+# Ejercicio 1 - Mongodb
 
-## Movimiento previos
-Antes que nada, instalamos la imagen de mongo y la corremos.
+##Configuración
+Para la configuración de Mongo es necesario haber instalado Docker previamente
+### Paso 1: Descargar la imagen de MongoDB
+Utiliza el siguiente comando para descargar la imagen oficial de MongoDB:
+```bash
+docker pull mongo
+```
 
-Cuando ya tenemos mongo corriendo en el puerto deseado podemos empezar a pasarle los archivos de interés (en este caso hay uno único en la carpeta `resources`).
+### Paso 2: Levantar el contenedor
+```bash
+docker run --name Mymongo -p 27017:27017 -d mongo
+```
 
-`docker cp ../resources/albumlist.csv Mymongo:/home/`
+##Ejercicio 1.a
+***Importe el archivo albumlist.csv (o su versión RAW) a una colección. 
+Este archivo cuenta con el top 500 de álbumes musicales de todos los tiempos según la revista Rolling Stones.***
 
-una vez que tenemos el archivo en el contenedor, importamos el csv a la base de datos (tenemos que estar adentro del contenedor `docker exec -it Mymongo bash`)
+Copiar el archivo CSV al contenedor
 
-`mongoimport --db music --collection albums --type csv --file /home/albumlist.csv --headerline`
+```bash
+docker cp mongodb/resources/albumlist.csv Mymongo:/home/
+```
+Ejecutar el comando de importación dentro del contenedor
 
-Estos dos comandos se pueden ejecutar con `sh eja.sh` pero como son para setear el entorno de trabajo decidimos ponerlo en este apartado del README.md. 
+```bash
+docker exec -it Mymongo mongoimport --db music --collection albums --type csv --file /home/albumlist.csv --headerline
+```
 
-## Comprobar que funciona
+***
 
-Usaremos mongo shell para enviar las consultas de los ejercicios b,c y d al puerto correspondiente para ver el funcionamiento correcto.
+Para correr cada consulta, primero se deben correr los siguientes comandos:
 
-Para proceder con la ejecución de las consultas moverse a la carpeta `scripts` luego ejegutar el archivo `.sh` correspondientes.
+```bash
+docker exec -it Mymongo bash ##Levanta un Shell bash dentro del contenedor
+```
+```bash
+mongosh ##Ejecuta el Shell de MongoDB
+```
+```bash
+use music ##Para usar la base de datos 'music'
+```
 
-| inciso |descripción| ejecución  |
-| --------- |--| ---------- |
-| b         |Cuente la cantidad de álbumes por año y ordénelos de manera descendente (mostrando los años con mayor cantidad de álbumes al principio).| `sh ejb.c` |
-| c         |A cada documento, agregarle un nuevo atributo llamado 'score' que sea 501-Number.| `sh ejc.c` |
-| d         |Realice una consulta que muestre el 'score' de cada artista.| `sh ejd.c` |
+##Ejercicio 1.b
+***Cuente la cantidad de álbumes por año y ordénelos de manera descendente (mostrando los años con mayor cantidad de álbumes al principio).***
 
+Dentro de la shell de MongoDB ejecutar la consulta:
+```bash
+db.albums.aggregate([
+  { $group: { _id: "$Year", count: { $sum: 1 } } },
+  { $sort: { count: -1 } }
+]).forEach(printjson);
+```
+***
+##Ejercicio 1.c
+***A cada documento, agregarle un nuevo atributo llamado 'score' que sea 501- Number.***
+
+Dentro de la shell de MongoDB ejecutar la consulta:
+```bash
+db.albums.updateMany(
+  {},
+  [{ $set: { score: { $subtract: [501, "$Number"] } } }]
+);
+```
+***
+##Ejercicio 1.d
+***Realice una consulta que muestre el 'score' de cada artista.***
+
+
+Dentro de la shell de MongoDB ejecutar la consulta:
+```bash
+db.albums.aggregate(
+  {$group: {_id:"$Artist", score: {$sum:"$score"}}}
+);
+```

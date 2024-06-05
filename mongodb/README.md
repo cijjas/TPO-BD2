@@ -1,8 +1,8 @@
 
 # Ejercicio 1 - Mongodb
 
-##Configuración
-Para la configuración de Mongo es necesario haber instalado Docker previamente
+Asegurarse de estar parado sobre el directorio correspondiente al ejercicio `/mongodb`
+
 ### Paso 1: Descargar la imagen de MongoDB
 Utiliza el siguiente comando para descargar la imagen oficial de MongoDB:
 ```bash
@@ -21,7 +21,7 @@ Este archivo cuenta con el top 500 de álbumes musicales de todos los tiempos se
 Copiar el archivo CSV al contenedor
 
 ```bash
-docker cp mongodb/resources/albumlist.csv Mymongo:/home/
+docker cp ./resources/albumlist.csv Mymongo:/home/
 ```
 Ejecutar el comando de importación dentro del contenedor
 

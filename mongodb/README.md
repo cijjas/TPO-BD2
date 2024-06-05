@@ -49,10 +49,31 @@ use music ##Para usar la base de datos 'music'
 Dentro de la shell de MongoDB ejecutar la consulta:
 ```bash
 db.albums.aggregate([
-  { $group: { _id: "$Year", count: { $sum: 1 } } },
-  { $sort: { count: -1 } }
-]).forEach(printjson);
+  {
+    $group: {
+      _id: "$Year",
+      album_amount: { $sum: 1 }
+    }
+  },
+  {
+    $sort: {
+      album_amount: -1
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      year: "$_id",
+      album_amount: 1
+    }
+  }
+]);
 ```
+
+La salida en la terminal debería verse así:
+
+![](resources/ej1b.png)
+
 ***
 ## Ejercicio 1.c
 ***A cada documento, agregarle un nuevo atributo llamado 'score' que sea 501- Number.***
@@ -64,6 +85,11 @@ db.albums.updateMany(
   [{ $set: { score: { $subtract: [501, "$Number"] } } }]
 );
 ```
+
+La salida en la terminal debería verse así:
+
+![](resources/ej1c.png)
+
 ***
 ## Ejercicio 1.d
 ***Realice una consulta que muestre el 'score' de cada artista.***
@@ -71,7 +97,22 @@ db.albums.updateMany(
 
 Dentro de la shell de MongoDB ejecutar la consulta:
 ```bash
-db.albums.aggregate(
-  {$group: {_id:"$Artist", score: {$sum:"$score"}}}
-);
+db.albums.aggregate([
+  {
+    $group: {
+      _id: "$Artist",
+      score: { $sum: "$score" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      Artist: "$_id",
+      score: 1
+    }
+  }
+]);
 ```
+La salida en la terminal debería verse así:
+
+![](resources/ej1d.png)

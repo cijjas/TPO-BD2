@@ -1,15 +1,17 @@
 
 # Ejercicio 1 - Mongodb
 
+### Paso 1: Movimientos previos
+
 Asegurarse de estar parado sobre el directorio correspondiente al ejercicio `/mongodb`
 
-### Paso 1: Descargar la imagen de MongoDB
+### Paso 2: Descargar la imagen de MongoDB
 Utiliza el siguiente comando para descargar la imagen oficial de MongoDB:
 ```bash
 docker pull mongo
 ```
 
-### Paso 2: Levantar el contenedor
+### Paso 3: Levantar el contenedor
 ```bash
 docker run --name Mymongo -p 27017:27017 -d mongo
 ```

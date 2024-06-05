@@ -1,6 +1,8 @@
-# Movimientos previos
+# Ejercicio 3 - Redis
 
-Para poder correr los comandos, se necesita tener el contenedor de redis corriendo.
+### Paso 1: Movimientos previos
+
+Para poder correr los comandos, se necesita tener el contenedor de Redis corriendo.
 
 >[!Note]
 > Obtener imagen: `docker pull redis`
@@ -17,8 +19,7 @@ Para eso, se deben tener instaladas las librerías `pandas` y `redis`.
 `pip3 install pandas`
 `pip3 install redis`
 
-Finalmente podes proceder a la ejecució de las consultas y tareas.
-
+Finalmente, podemos proceder a la ejecución de las consultas y tareas.
 
 # Comprobando que funciona
 

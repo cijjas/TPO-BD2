@@ -34,7 +34,7 @@ python3 import_data.py
 ```
 
 cuando termina de ejecutar se esparará ver la salida:
-![[Pasted image 20240607092748.png]]
+![](resources/Pasted image 20240607092748.png)
 
 
 ***
@@ -64,7 +64,7 @@ DBSIZE
 
 Debería observarse la siguiente salida
 
-![[Pasted image 20240607104117.png]]
+![](resources/Pasted image 20240607104117.png)
 
 ***
 ## Ejercicio 3.d
@@ -76,8 +76,8 @@ ZCARD bataxi
 
 
 Debería observarse la siguiente salida
+![](resources/Pasted image 20240607104153.png)
 
-![[Pasted image 20240607104153.png]]
 ***
 ## Ejercicio 3.d
 ***¿Sobre qué estructura de Redis trabaja el GeoADD?***

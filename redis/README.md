@@ -34,6 +34,7 @@ python3 import_data.py
 ```
 
 cuando termina de ejecutar se esparará ver la salida:
+
 ![](resources/ej3a.png)
 
 
@@ -76,6 +77,7 @@ ZCARD bataxi
 
 
 Debería observarse la siguiente salida
+
 ![](resources/ej3d.png)
 
 ***

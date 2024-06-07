@@ -1,4 +1,3 @@
-import pandas as pd
 import redis
 
 # Conexión a Redis
@@ -13,14 +12,14 @@ places = [
 total_viajes = 0
 for place in places:
     viajes_cerca = r.georadius("bataxi", place["lon"], place["lat"], 1, unit='km')
-    total_viajes += len(viajes_cerca)
+    num_viajes_cerca = len(viajes_cerca)
+    total_viajes += num_viajes_cerca
+    print(f"Total de viajes a 1 km de {place['place']}: {num_viajes_cerca}")
 
 print(f"Total de viajes a 1 km de los 3 lugares: {total_viajes}")
 
-
 total_keys = r.dbsize()
 print(f"Total de KEYS en la base de datos: {total_keys}")
-
 
 miembros_bataxi = r.zcard("bataxi")
 print(f"Total de miembros en la key 'bataxi': {miembros_bataxi}")

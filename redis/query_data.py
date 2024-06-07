@@ -10,16 +10,23 @@ places = [
 ]
 
 total_viajes = 0
+viajes_por_lugar = {}
+
 for place in places:
     viajes_cerca = r.georadius("bataxi", place["lon"], place["lat"], 1, unit='km')
     num_viajes_cerca = len(viajes_cerca)
     total_viajes += num_viajes_cerca
-    print(f"Total de viajes a 1 km de {place['place']}: {num_viajes_cerca}")
+    viajes_por_lugar[place["place"]] = num_viajes_cerca
 
-print(f"Total de viajes a 1 km de los 3 lugares: {total_viajes}")
+print(f"b. Total de viajes a 1 km de los 3 lugares: {total_viajes}")
 
+for lugar, count in viajes_por_lugar.items():
+    print(f"-- Total de viajes a 1 km de {lugar}: {count}")
+
+print(f"")
 total_keys = r.dbsize()
-print(f"Total de KEYS en la base de datos: {total_keys}")
+print(f"c. Total de KEYS en la base de datos: {total_keys}")
+print(f"")
 
 miembros_bataxi = r.zcard("bataxi")
-print(f"Total de miembros en la key 'bataxi': {miembros_bataxi}")
+print(f"d. Total de miembros en la key 'bataxi': {miembros_bataxi}")

@@ -61,29 +61,32 @@ Este script lo que hace es ejecutar los comandos en el cli de redis del contened
 
 > [!Note]
 > De forma equivalente, lo que hace python es ejecutar los comandos en el cli de redis de esta forma
->#### Ejercicio b
->```
-># Cuenta la cantidad de ubicaciones a 1km de Parque Chas
-GEORADIUS bataxi -58.479258 -34.582497 1 km
 >
-># Cuenta la cantidad de ubicaciones a 1km de UTN
-GEORADIUS bataxi -58.468606 -34.658304 1 km
->
-># Cuenta la cantidad de ubicaciones a 1km de Madero
-GEORADIUS bataxi -58.367862 -34.602938 1 km
->```
->donde luego utiliza la suma para obtener el total
-> #### Ejercicio c
+> #### Ejercicio b
+> ```sh
+> # Cuenta la cantidad de ubicaciones a 1km de Parque Chas
+> GEORADIUS bataxi -58.479258 -34.582497 1 km
 > 
+> # Cuenta la cantidad de ubicaciones a 1km de UTN
+> GEORADIUS bataxi -58.468606 -34.658304 1 km
+> 
+> # Cuenta la cantidad de ubicaciones a 1km de Madero
+> GEORADIUS bataxi -58.367862 -34.602938 1 km
 > ```
+> donde luego utiliza la suma para obtener el total
+>
+> #### Ejercicio c
+> ```sh
 > # Cantidad de keys en la base de datos
 > DBSIZE
 > ```
+>
 > #### Ejercicio d
-> ```
+> ```sh
 > # Cantidad de miembros de 'bataxi'
 > ZCARD bataxi
 > ```
+
 
 ***
 ## Ejercicio 3.d

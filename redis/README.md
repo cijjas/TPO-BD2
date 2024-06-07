@@ -34,7 +34,7 @@ python3 import_data.py
 ```
 
 cuando termina de ejecutar se esparará ver la salida:
-![](resources/Pasted image 20240607092748.png)
+![](resources/ej3a.png)
 
 
 ***
@@ -64,7 +64,7 @@ DBSIZE
 
 Debería observarse la siguiente salida
 
-![](resources/Pasted image 20240607104117.png)
+![](resources/ej3c.png)
 
 ***
 ## Ejercicio 3.d
@@ -76,7 +76,7 @@ ZCARD bataxi
 
 
 Debería observarse la siguiente salida
-![](resources/Pasted image 20240607104153.png)
+![](resources/ej3d.png)
 
 ***
 ## Ejercicio 3.d

@@ -59,17 +59,25 @@ redis-cli
 ***¿Cuántas KEYS hay en la base de datos Redis?***
 
 ```
-redis-cli DBSIZE
+DBSIZE
 ```
 
+Debería observarse la siguiente salida
+
+![[Pasted image 20240607104117.png]]
 
 ***
 ## Ejercicio 3.d
 ***¿Cuántos miembros tiene la key 'bataxi'?***
 
 ```
-redis-cli ZCARD bataxi
+ZCARD bataxi
 ```
+
+
+Debería observarse la siguiente salida
+
+![[Pasted image 20240607104153.png]]
 ***
 ## Ejercicio 3.d
 ***¿Sobre qué estructura de Redis trabaja el GeoADD?***

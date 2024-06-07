@@ -39,46 +39,51 @@ cuando termina de ejecutar se esparará ver la salida:
 
 
 ***
-
-Para correr las siguientes consulta se deben correr los siguientes comandos:
-
-```bash
-## Abrir una Shell bash dentro del contenedor
-docker exec -it Myredis bash 
-
-## Abrir la shell de Redis
-redis-cli 
+## Ejercicio 3.b, 3c, 3d
+El archivo de python `query_data.py` contiene los comandos automatizados para ejectuar las consultas particulares de los ejercicios
+```sh
+python3 query_data.py
 ```
-
-## Ejercicio 3.b
-***¿Cuántos viajes se generaron a 1 km de distancia de estos 3 lugares?***
-
-
-
-***
-## Ejercicio 3.c
-***¿Cuántas KEYS hay en la base de datos Redis?***
+la salida esperada es
 
 ```
-DBSIZE
+b. Total de viajes a 1 km de los 3 lugares: 590
+-- Total de viajes a 1 km de Parque Chas: 339
+-- Total de viajes a 1 km de UTN: 9
+-- Total de viajes a 1 km de ITBA Madero: 242
+
+c. Total de KEYS en la base de datos: 1
+
+d. Total de miembros en la key 'bataxi': 19148
 ```
 
-Debería observarse la siguiente salida
+Este script lo que hace es ejecutar los comandos en el cli de redis del contenedor de docker que levantamos.
 
-![](resources/ej3c.png)
-
-***
-## Ejercicio 3.d
-***¿Cuántos miembros tiene la key 'bataxi'?***
-
-```
-ZCARD bataxi
-```
-
-
-Debería observarse la siguiente salida
-
-![](resources/ej3d.png)
+> [!Note]
+> De forma equivalente, lo que hace python es ejecutar los comandos en el cli de redis de esta forma
+>#### Ejercicio b
+>```
+># Cuenta la cantidad de ubicaciones a 1km de Parque Chas
+GEORADIUS bataxi -58.479258 -34.582497 1 km
+>
+># Cuenta la cantidad de ubicaciones a 1km de UTN
+GEORADIUS bataxi -58.468606 -34.658304 1 km
+>
+># Cuenta la cantidad de ubicaciones a 1km de Madero
+GEORADIUS bataxi -58.367862 -34.602938 1 km
+>```
+>donde luego utiliza la suma para obtener el total
+> #### Ejercicio c
+> 
+> ```
+> # Cantidad de keys en la base de datos
+> DBSIZE
+> ```
+> #### Ejercicio d
+> ```
+> # Cantidad de miembros de 'bataxi'
+> ZCARD bataxi
+> ```
 
 ***
 ## Ejercicio 3.d

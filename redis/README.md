@@ -21,7 +21,10 @@ docker run --name Myredis -p 6379:6379 -d redis
 
 Se decidió importar el archivo vía python ya que es un lenguaje que se usa mucho con redis y porque la [documentación de redis](https://redis.io/docs/latest/develop/data-types/geospatial/) nos muestra también ejemplos con python. Además es una buena herramienta ya que en la mayoria de las aplicaciones que podrían usar redis lo más probable es que se haga a través la librería específica.
 
-Para eso, se deben tener instaladas las librerías `pandas` y `redis`.
+Para eso, se deben tener instaladas las librerías `pandas` y `redis`. 
+
+> [!Note]
+> Codespace tiene instalado pandas y python3 por default pero puede ser bueno chequear que esto es así
 
 ```sh
 pip3 install pandas redis
@@ -39,7 +42,7 @@ cuando termina de ejecutar se esparará ver la salida:
 
 
 ***
-## Ejercicio 3.b, 3c, 3d
+## Ejercicio 3.b, 3.c, 3.d
 El archivo de python `query_data.py` contiene los comandos automatizados para ejectuar las consultas particulares de los ejercicios
 ```sh
 python3 query_data.py

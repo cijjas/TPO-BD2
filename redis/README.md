@@ -6,7 +6,7 @@
 Asegurarse de estar parado sobre el directorio correspondiente al ejercicio `/redis`
 
 ### Paso 2: Descargar la imagen de Redis
-Utiliza el siguiente comando para descargar la imagen oficial de Redis:
+Utilizar el siguiente comando para descargar la imagen oficial de Redis:
 ```bash
 docker pull redis
 ```
@@ -19,24 +19,24 @@ docker run --name Myredis -p 6379:6379 -d redis
 ## Ejercicio 3.a
 ***Importar los datos del archivo a Redis***
 
-Se decidió importar el archivo vía python ya que es un lenguaje que se usa mucho con redis y porque la [documentación de redis](https://redis.io/docs/latest/develop/data-types/geospatial/) nos muestra también ejemplos con python. Además es una buena herramienta ya que en la mayoria de las aplicaciones que podrían usar redis lo más probable es que se haga a través la librería específica.
+Se decidió importar el archivo vía python, ya que es un lenguaje de frecuente uso con redis y dado que la [documentación de redis](https://redis.io/docs/latest/develop/data-types/geospatial/) muestra también ejemplos con python. A su vez resulta una buena herramienta ya que en la mayoria de las aplicaciones que podrían usar redis es altamente probablemente que se realize a través la librería específica.
 
-Para eso, se deben tener instaladas las librerías `pandas` y `redis`. 
+Para eso se deben tener instaladas las librerías `pandas` y `redis`. 
 
 > [!Note]
-> Codespace tiene instalado pandas y python3 por default pero puede ser bueno chequear que esto es así
+> Codespace tiene instalado pandas y python3 por default, aun así es una buena práctica verificarlo.
 
 ```sh
 pip3 install pandas redis
 ```
 
-luego para ejecutar el script que importará los datos al contenedor
+Luego, para ejecutar el script que importará los datos al contenedor
 
 ```sh
 python3 import_data.py
 ```
 
-cuando termina de ejecutar se esparará ver la salida:
+Cuando se termine de ejecutar se esparará ver la salida:
 
 ![](resources/ej3a.png)
 
@@ -47,7 +47,7 @@ El archivo de python `query_data.py` contiene los comandos automatizados para ej
 ```sh
 python3 query_data.py
 ```
-la salida esperada es
+La salida esperada es:
 
 ```
 b. Total de viajes a 1 km de los 3 lugares: 590
@@ -60,7 +60,7 @@ c. Total de KEYS en la base de datos: 1
 d. Total de miembros en la key 'bataxi': 19148
 ```
 
-Este script lo que hace es ejecutar los comandos en el cli de redis del contenedor de docker que levantamos.
+Este script ejecutará los comandos en el cli de redis dentro del contenedor de docker levantado.
 
 > [!Note]
 > De forma equivalente, lo que hace python es ejecutar los comandos en el cli de redis de esta forma

@@ -1,6 +1,20 @@
 
 # Ejercicio 1 - Mongodb
 
+1.[Instrucciones](#instrucciones)
+  - [Paso 1: Movimientos previos]
+  - [Paso 2: Descargar la imagen de MongoDB]
+  - [Paso 3: Levantar el contenedor]
+2. [Ejercicios](#ejercicios)
+  - [Ejercicio 1.a](#ejercicio-1a)
+  - [Ejercicio 1.b](#ejercicio-1b)
+  - [Ejercicio 1.c](#ejercicio-1c)
+  - [Ejercicio 1.d](#ejercicio-1d)
+
+***
+
+## Instrucciones
+
 ### Paso 1: Movimientos previos
 
 Asegurarse de estar parado sobre el directorio correspondiente al ejercicio `/mongodb`
@@ -16,7 +30,11 @@ docker pull mongo
 docker run --name Mymongo -p 27017:27017 -d mongo
 ```
 
-## Ejercicio 1.a
+***
+
+## Ejercicios
+---
+### Ejercicio 1.a
 ***Importe el archivo albumlist.csv (o su versión RAW) a una colección. 
 Este archivo cuenta con el top 500 de álbumes musicales de todos los tiempos según la revista Rolling Stones.***
 
@@ -44,8 +62,8 @@ mongosh ##Ejecuta el Shell de MongoDB
 ```bash
 use music ##Para usar la base de datos 'music'
 ```
-
-## Ejercicio 1.b
+---
+### Ejercicio 1.b
 ***Cuente la cantidad de álbumes por año y ordénelos de manera descendente (mostrando los años con mayor cantidad de álbumes al principio).***
 
 Dentro de la shell de MongoDB ejecutar la consulta:
@@ -76,8 +94,8 @@ La salida en la terminal debería verse así:
 
 ![](resources/ej1b.png)
 
-***
-## Ejercicio 1.c
+---
+### Ejercicio 1.c
 ***A cada documento, agregarle un nuevo atributo llamado 'score' que sea 501- Number.***
 
 Dentro de la shell de MongoDB ejecutar la consulta:
@@ -92,8 +110,8 @@ La salida en la terminal debería verse así:
 
 ![](resources/ej1c.png)
 
-***
-## Ejercicio 1.d
+---
+### Ejercicio 1.d
 ***Realice una consulta que muestre el 'score' de cada artista.***
 
 

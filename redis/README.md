@@ -1,12 +1,12 @@
-# Índice
+# Contenidos
 
 1. [Ejercicio 3 - Redis](#ejercicio-3---redis)
     - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
     - [Paso 2: Descargar la imagen de Redis](#paso-2-descargar-la-imagen-de-redis)
     - [Paso 3: Levantar el contenedor](#paso-3-levantar-el-contenedor)
-2. [Ejercicio 3.a: Importar los datos del archivo a Redis](#ejercicio-3a-importar-los-datos-del-archivo-a-redis)
-3. [Ejercicio 3.b, 3.c, 3.d: Consultas y Comandos](#ejercicio-3b-3c-3d-consultas-y-comandos)
-4. [Ejercicio 3.d: Estructura de Redis sobre la que trabaja el GeoADD](#ejercicio-3d-estructura-de-redis-sobre-la-que-trabaja-el-geoadd)
+2. [Ejercicio 3.a: Importar los datos del archivo a Redis](#ejercicio-3.a:-importar-los-datos-del-archivo-a-redis)
+3. [Ejercicio 3.b, 3.c, 3.d: Consultas y Comandos](#ejercicio-3.b,3.c,3.d:-consultas-y-comandos)
+4. [Ejercicio 3.d: Estructura de Redis sobre la que trabaja el GeoADD](#ejercicio-3.d:-estructura-de-redis-sobre-la-que-trabaja-el-geoadd)
 
 
 # Ejercicio 3 - Redis

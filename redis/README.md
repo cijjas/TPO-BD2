@@ -1,16 +1,18 @@
-# Contenidos
+# Ejercicio 3 - Redis
 
-1. [Ejercicio 3 - Redis](#ejercicio-3---redis)
+## Contenidos
+
+1. [Instrucciones](#instrucciones)
     - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
     - [Paso 2: Descargar la imagen de Redis](#paso-2-descargar-la-imagen-de-redis)
     - [Paso 3: Levantar el contenedor](#paso-3-levantar-el-contenedor)
-2. [Ejercicio 3.a](#ejercicio-3a)
-3. [Ejercicio 3.b, 3.c, 3.d](#ejercicio-3b-3c-3d)
-4. [Ejercicio 3.d](#ejercicio-3d)
+2. [Ejercicios](#ejercicios)
+    - [Ejercicio 3.a](#ejercicio-3a)
+    - [Ejercicio 3.b, 3.c, 3.d](#ejercicio-3b-3c-3d)
+    - [Ejercicio 3.d](#ejercicio-3d)
 
 
-# Ejercicio 3 - Redis
-
+## Instrucciones
 ### Paso 1: Movimientos previos
 
 Asegurarse de estar parado sobre el directorio correspondiente al ejercicio `/redis`
@@ -25,8 +27,8 @@ docker pull redis
 ```bash
 docker run --name Myredis -p 6379:6379 -d redis
 ```
-
-## Ejercicio 3.a
+## Ejercicios
+### Ejercicio 3.a
 ***Importar los datos del archivo a Redis***
 
 Se decidió importar el archivo vía python, ya que es un lenguaje de frecuente uso con redis y dado que la [documentación de redis](https://redis.io/docs/latest/develop/data-types/geospatial/) muestra también ejemplos con python. A su vez resulta una buena herramienta ya que en la mayoria de las aplicaciones que podrían usar redis es altamente probablemente que se realize a través la librería específica.
@@ -52,7 +54,7 @@ Cuando se termine de ejecutar se esparará ver la salida:
 
 
 ***
-## Ejercicio 3.b, 3.c, 3.d
+### Ejercicio 3.b, 3.c, 3.d
 El archivo de python `query_data.py` contiene los comandos automatizados para ejectuar las consultas particulares de los ejercicios
 ```sh
 python3 query_data.py
@@ -102,7 +104,7 @@ Este script ejecutará los comandos en el cli de redis dentro del contenedor de 
 
 
 ***
-## Ejercicio 3.d
+### Ejercicio 3.d
 ***¿Sobre qué estructura de Redis trabaja el GeoADD?***
 
 El comando `GEOADD` trabaja sobre la estructura de datos `Sorted Set`(Se puede ver que para el ejercicio anterior se usó `ZCARD` para obtener la cardinalidad de un conjunto ordenado), donde las coordenadas son almacenadas como elementos del set con la puntuación correspondiente a las coordenadas geohash.

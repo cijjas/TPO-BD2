@@ -3,16 +3,16 @@
 ## Contenidos
 
 1. [Instrucciones](#instrucciones)
-  - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
-  - [Paso 2: Abrir la sandbox](#paso-2-abrir-la-sandbox)
-  - [Paso 3: Generar la base de datos](#paso-3-generar-la-base-de-datos)
-  - [Paso 4: Cargar la base de datos](#paso-4-cargar-la-base-de-datos)
-  - [Paso 5: Cargar relaciones](#paso-5-cargar-relaciones)
+    - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
+    - [Paso 2: Abrir la sandbox](#paso-2-abrir-la-sandbox)
+    - [Paso 3: Generar la base de datos](#paso-3-generar-la-base-de-datos)
+    - [Paso 4: Cargar la base de datos](#paso-4-cargar-la-base-de-datos)
+    - [Paso 5: Cargar relaciones](#paso-5-cargar-relaciones)
 2. [Ejercicios](#ejercicios)
-  - [Ejercicio 2.a](#ejercicio-2a)
-  - [Ejercicio 2.b](#ejercicio-2b)
-  - [Ejercicio 2.c](#ejercicio-2c)
-  - [Ejercicio 2.d](#ejercicio-2d)
+    - [Ejercicio 2.a](#ejercicio-2a)
+    - [Ejercicio 2.b](#ejercicio-2b)
+    - [Ejercicio 2.c](#ejercicio-2c)
+    - [Ejercicio 2.d](#ejercicio-2d)
 
 ## Instrucciones
 ### Paso 1: Movimientos previos

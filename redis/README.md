@@ -56,9 +56,9 @@ Cuando se termine de ejecutar se esparará ver la salida:
 ***
 ### Ejercicio 3.b, 3.c, 3.d
 
-***b. ¿Cuántos viajes se generaron a 1 km de distancia de estos 3 lugares?
-c. ¿Cuántas KEYS hay en la base de datos Redis?
-d. ¿Cuántos miembros tiene la key 'bataxi'?***
+***b. ¿Cuántos viajes se generaron a 1 km de distancia de estos 3 lugares?***
+***c. ¿Cuántas KEYS hay en la base de datos Redis?***
+***d. ¿Cuántos miembros tiene la key 'bataxi'?***
 
 El archivo de python `query_data.py` contiene los comandos automatizados para ejectuar las consultas particulares de los ejercicios
 ```sh

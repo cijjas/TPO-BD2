@@ -1,7 +1,7 @@
 
 # Ejercicio 1 - Mongodb
 
-1.[Instrucciones](#instrucciones)
+1. [Instrucciones](#instrucciones)
     - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
     - [Paso 2: Descargar la imagen de MongoDB](#paso-2-descargar-la-imagen-de-mongodb)
     - [Paso 3: Levantar el contenedor](#paso-3-levantar-el-contenedor)
@@ -10,7 +10,6 @@
     - [Ejercicio 1.b](#ejercicio-1b)
     - [Ejercicio 1.c](#ejercicio-1c)
     - [Ejercicio 1.d](#ejercicio-1d)
-
 
 ## Instrucciones
 

@@ -1,5 +1,20 @@
 # Ejercicio 2 - Neo4J
 
+## Contenidos
+
+1. [Instrucciones](#instrucciones)
+  - [Paso 1: Movimientos previos](#paso-1-movimientos-previos)
+  - [Paso 2: Abrir la sandbox](#paso-2-abrir-la-sandbox)
+  - [Paso 3: Generar la base de datos](#paso-3-generar-la-base-de-datos)
+  - [Paso 4: Cargar la base de datos](#paso-4-cargar-la-base-de-datos)
+  - [Paso 5: Cargar relaciones](#paso-5-cargar-relaciones)
+2. [Ejercicios](#ejercicios)
+  - [Ejercicio 2.a](#ejercicio-2a)
+  - [Ejercicio 2.b](#ejercicio-2b)
+  - [Ejercicio 2.c](#ejercicio-2c)
+  - [Ejercicio 2.d](#ejercicio-2d)
+
+## Instrucciones
 ### Paso 1: Movimientos previos
 
 Abrir una sandbox en blanco en el sitio de Neo4J: https://sandbox.neo4j.com.
@@ -34,8 +49,8 @@ Dirigirse a la página 3 y ejecutar los únicos 2 comandos disponibles, los cual
 ![Alt text](./resources/Pasted%20image%2020240529082759.png)
 
 Ahora nos encontramos en condiciones de realizar los ejercicios.
-
-## Ejercicio 2.a
+## Ejercicios
+### Ejercicio 2.a
 ***¿Cuántos productos hay en la base?***
 
 Desde la interfaz de web de Neo4J, ejecutar el siguiente comando:
@@ -48,7 +63,7 @@ La salida debería ser la siguiente:
 
 ![Alt text](./resources/Pasted%20image%2020240529083418.png)
 
-## Ejercicio 2.b
+### Ejercicio 2.b
 ***¿Cuánto cuesta el "Queso Cabrales"?***
 
 Desde la interfaz de web de Neo4J, ejecutar el siguiente comando:
@@ -61,7 +76,7 @@ La salida debería ser la siguiente:
 
 ![Alt text](./resources/Pasted%20image%2020240529083545.png)
 
-## Ejercicio 2.c
+### Ejercicio 2.c
 ***¿Cuántos productos pertenecen a la categoría "Condiments"?***
 
 Desde la interfaz de web de Neo4J, ejecutar el siguiente comando:
@@ -75,7 +90,7 @@ La salida debería ser la siguiente:
 
 ![Alt text](./resources/Pasted%20image%2020240529084055.png)
 
-## Ejercicio 2.d
+### Ejercicio 2.d
 ***Del conjunto de productos que ofrecen los proveedores de "UK", ¿Cuál es el nombre y el precio unitario de los tres productos más caros?***
 
 Desde la interfaz de web de Neo4J, ejecutar el siguiente comando:

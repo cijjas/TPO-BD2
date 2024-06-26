@@ -12,9 +12,9 @@ Cada base de datos tiene su propia carpeta (`./mongodb`, `./neo4j`, `./redis`) d
 
 |**Carpeta**|**Descripción**|**Ejecución**|
 |---|---|---|
-|`./mongodb`|Implementación de consultas y manipulaciones en una base de datos MongoDB.|Dentro de esta carpeta, se encuentra un README.md que describe el paso a paso para ver el correcto funcionamiento de las operaciones realizadas.|
+|`./mongodb`|Implementación de consultas y manipulaciones en una base de datos MongoDB.|Dentro de esta carpeta, se encuentra un `README.md` que describe el paso a paso para ver el correcto funcionamiento de las operaciones realizadas.|
 |`./neo4j`|Uso de una sandbox particular de Neo4j para realizar consultas sobre una base de datos de grafos.|Consultar el `README.md` dentro de la carpeta `./neo4j` para obtener instrucciones sobre cómo utilizar la sandbox y ejecutar las consultas requeridas.|
-|`./redis`|Realización de operaciones geo-referenciadas utilizando Redis.|Dentro de esta carpeta, se encuentran scripts ejecutables en formato `.sh` que permiten ver el correcto funcionamiento de las operaciones realizadas.|
+|`./redis`|Realización de operaciones geo-referenciadas utilizando Redis.|Dentro de esta carpeta, se encuentran scripts ejecutables de python que permiten ver el correcto funcionamiento de las operaciones realizadas y un `README.md`.|
 
 ### Referencias
 
